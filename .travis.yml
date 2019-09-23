@@ -1,0 +1,17 @@
+language: python
+matrix:
+  include:
+    - name: "Python on Linux"
+      python: 3.7
+      os: linux
+    - name: "Python on OSX"
+      os: osx
+      language: shell
+      osx_image: xcode11
+    - name: "Python n Windows"
+      os: windows
+      language: shell
+
+install: pip install -r requirements.txt
+
+script: pytest
